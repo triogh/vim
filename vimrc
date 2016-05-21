@@ -1,4 +1,8 @@
+"""""""""""""""""""""""""""""""
+"""""""" General conf """""""""
+"""""""""""""""""""""""""""""""
 " comments
+
 
 " visual bell
 set vb
@@ -13,23 +17,20 @@ syntax on
 " colorscheme
 colorscheme ron
 
-" indenting
+" general indenting
 set autoindent
 " set smartindent
-" autocmd FileType perl set smartindent
+
+" detect filetype
 filetype on
 filetype plugin on
 " filetype indent on
 " filetype plugin indent on
 
 " 4 space tabs
-" autocmd FileType perl set tabstop=4
 set tabstop=4
-" autocmd FileType perl set shiftwidth=4
 set shiftwidth=4
-" autocmd FileType perl set expandtab
 set expandtab
-" autocmd FileType perl set softtabstop=4
 " set softtabstop=4
 
 " paste mode is disabled
@@ -51,6 +52,18 @@ map <F4> :!perl -c %<CR>
 map <F5> :set number!<CR><Esc>
 " pressing F6 will enable/disable paste mode
 map <F6> :set paste!<CR><Esc>
+
+"""""""""""""""""""""""""""""""
+"""""""" Perl specific """"""""
+"""""""""""""""""""""""""""""""
+
+" indenting
+" autocmd FileType perl set smartindent
+"
+" autocmd FileType perl set tabstop=4
+" autocmd FileType perl set shiftwidth=4
+" autocmd FileType perl set expandtab
+" autocmd FileType perl set softtabstop=4
 
 " template for .pl files
 autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.template
