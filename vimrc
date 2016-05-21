@@ -19,19 +19,19 @@ colorscheme ron
 
 " general indenting
 set autoindent
-" set smartindent
+"set smartindent
 
 " detect filetype
 filetype on
 filetype plugin on
-" filetype indent on
-" filetype plugin indent on
+"filetype indent on
+"filetype plugin indent on
 
 " 4 space tabs
 set tabstop=4
 set shiftwidth=4
 set expandtab
-" set softtabstop=4
+"set softtabstop=4
 
 " paste mode is disabled
 set nopaste
@@ -58,12 +58,12 @@ map <F6> :set paste!<CR><Esc>
 """""""""""""""""""""""""""""""
 
 " indenting
-" autocmd FileType perl set smartindent
+"autocmd FileType perl set smartindent
 "
-" autocmd FileType perl set tabstop=4
-" autocmd FileType perl set shiftwidth=4
-" autocmd FileType perl set expandtab
-" autocmd FileType perl set softtabstop=4
+"autocmd FileType perl set tabstop=4
+"autocmd FileType perl set shiftwidth=4
+"autocmd FileType perl set expandtab
+"autocmd FileType perl set softtabstop=4
 
 " template for .pl files
 autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.template
@@ -75,17 +75,17 @@ let perl_include_pod = 1
 let perl_extended_vars = 1
 
 " Tidy selected lines (or entire file) with _t:
-" nnoremap <silent> _t :%!perltidy -q<Enter>
-" vnoremap <silent> _t :!perltidy -q<Enter>
+"nnoremap <silent> _t :%!perltidy -q<Enter>
+"vnoremap <silent> _t :!perltidy -q<Enter>
 
 " Deparse obfuscated code
-" nnoremap <silent> _d :.!perl -MO=Deparse 2>/dev/null<cr>
-" vnoremap <silent> _d :!perl -MO=Deparse 2>/dev/null<cr>
+"nnoremap <silent> _d :.!perl -MO=Deparse 2>/dev/null<cr>
+"vnoremap <silent> _d :!perl -MO=Deparse 2>/dev/null<cr>
 
 " show matching brackets
 autocmd FileType perl set showmatch
 
 " check perl code with :make
-" autocmd FileType perl set makeprg=perl\ -c\ %\ $*
-" autocmd FileType perl set errorformat=%f:%l:%m
-" autocmd FileType perl set autowrite
+"autocmd FileType perl set makeprg=perl\ -c\ %\ $*
+"autocmd FileType perl set errorformat=%f:%l:%m
+"autocmd FileType perl set autowrite
