@@ -23,6 +23,10 @@ set autoindent
 
 " detect filetype
 filetype on
+
+" enable VIM plugins
+" i.e. Perl-Support
+" http://www.vim.org/scripts/script.php?script_id=556
 filetype plugin on
 "filetype indent on
 "filetype plugin indent on
@@ -66,7 +70,7 @@ map <F6> :set paste!<CR><Esc>
 "autocmd FileType perl set softtabstop=4
 
 " template for .pl files
-autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.template
+"autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.template
 
 " perl includes pod
 let perl_include_pod = 1
