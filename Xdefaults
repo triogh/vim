@@ -1,0 +1,9 @@
+# this file defines settings for xterm
+# the file needs to be placed in user home dir (i.e. ~/user/.Xdefaults)
+# the settings visible below are from
+# http://www.linuxquestions.org/questions/debian-26/how-to-change-background-and-fonts-color-in-xterm-156290/
+
+# XTerm*Background: black
+# XTerm*Foreground: white
+XTerm*Background: dark slate gray
+XTerm*Foreground: antique white
