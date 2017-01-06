@@ -1,5 +1,7 @@
 # this file defines settings for xterm
 # the file needs to be placed in user home dir (i.e. ~/user/.Xdefaults)
+# take note, it seems that some of the config directives are case sensitive
+
 # the settings visible below are from
 # http://www.linuxquestions.org/questions/debian-26/how-to-change-background-and-fonts-color-in-xterm-156290/
 
@@ -7,3 +9,22 @@
 # XTerm*Foreground: white
 XTerm*Background: dark slate gray
 XTerm*Foreground: antique white
+
+# https://scarygliders.net/2011/12/01/customize-xterm-the-original-and-best-terminal/
+# I like a LOT of scrollback...
+xterm*saveLines: 15000
+
+# Use a nice truetype font and size by default... 
+xterm*faceName: DejaVu Sans Mono Book
+xterm*faceSize: 10
+
+# right hand side scrollbar...
+xterm*rightScrollBar: true
+xterm*scrollBar: true
+
+# double-click to select whole URLs :D 
+xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+# https://unix4lyfe.org/xterm/ 
+# honor .profile and generally initialize the shell environment the way I expect
+xterm*loginShell: true
