@@ -23,10 +23,6 @@ set autoindent
 
 " detect filetype
 filetype on
-
-" enable VIM plugins
-" i.e. Perl-Support
-" http://www.vim.org/scripts/script.php?script_id=556
 filetype plugin on
 "filetype indent on
 "filetype plugin indent on
@@ -70,7 +66,7 @@ map <F6> :set paste!<CR><Esc>
 "autocmd FileType perl set softtabstop=4
 
 " template for .pl files
-"autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.template
+autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.template
 
 " perl includes pod
 let perl_include_pod = 1
@@ -93,3 +89,20 @@ autocmd FileType perl set showmatch
 "autocmd FileType perl set makeprg=perl\ -c\ %\ $*
 "autocmd FileType perl set errorformat=%f:%l:%m
 "autocmd FileType perl set autowrite
+
+"""""""""""""""""""""""""""""""
+""""""""""" Syntastic """""""""
+"""""""""""""""""""""""""""""""
+":help Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_perl_checker = 1
+let g:syntastic_perl_checkers = ["perl"]
+"let g:syntastic_mode_map = { "mode": "passive" }
+let g:syntastic_auto_jump = 3
